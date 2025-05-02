@@ -1,0 +1,434 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;  /* Prevent horizontal scroll */
+  overflow-y: auto;    /* Enable vertical scroll */
+  height: 100%;  
+ }
+  
+  /* Navbar */
+  .navbar {
+    background: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #222;
+    color: #eee;
+    padding: 3rem 2rem 1rem;
+    margin-top: 2rem;
+    position: relative;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .navbar-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: #fff;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem;
+      gap: 2rem;
+      transition: right 0.3s ease;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    .navbar-check:checked ~ .navbar-menu {
+      right: 0;
+    }
+  
+    /* Ensure the body is scrollable even when the menu is open */
+    body {
+      overflow-y: scroll;
+    }
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .navbar-brand .logo {
+    height: 50px;
+    width: 100px;
+  }
+  
+  .navbar-check {
+    display: none;
+  }
+  
+  .navbar-toggler {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-menu .nav-item .nav-link,
+  .navbar-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar-menu .nav-item .nav-link:hover,
+  .navbar-menu li a:hover {
+    color: #007bff;
+  }
+  
+  /* Search */
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .search-input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .search-icon {
+    background-color: #007bff;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  /* Close menu button */
+  .close-menu {
+    display: none; /* Hidden on desktop */
+    font-size: 2rem;
+    color: #333;
+    text-align: right;
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Main Section */
+  .container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  
+  .container p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 1rem;
+  }
+  
+  
+  /* Footer */
+  footer {
+    background-color: #222;
+    color: #eee;
+    padding: 3rem 2rem 1rem;
+    margin-top: 2rem;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .footer-logo img {
+    width: 120px;
+    height: auto;
+  }
+  
+  .footer-nav,
+  .footer-social,
+  .footer-contact {
+    flex: 1 1 200px;
+  }
+  
+  .footer-nav h3,
+  .footer-social h3,
+  .footer-contact h3 {
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+  }
+  
+  .footer-nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-nav ul li a:hover {
+    color: #fff;
+  }
+  
+  .footer-social .social-icon {
+    color: #ccc;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-social .social-icon:hover {
+    color: #fff;
+  }
+  
+  .footer-contact p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+  
+  /* Scrollbar styling for Webkit Browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-toggler {
+      display: block; /* Show hamburger icon */
+      color: #333;
+    }
+  
+    .navbar-menu {
+      position: fixed;
+      top: 0;
+      right: -100%; /* Hidden initially */
+      width: 70%;
+      height: 100vh;
+      background-color: #fff;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem;
+      gap: 2rem;
+      transition: right 0.3s ease;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    .navbar-check:checked ~ .navbar-menu {
+      right: 0;
+    }
+  
+    .close-menu {
+      display: block; /* Show X icon only in mobile */
+    }
+  
+    .navbar-search {
+      display: none; /* Hide search bar if needed */
+    }
+  
+    .navbar-menu .nav-item {
+      text-align: center;
+      padding: 1rem 0;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container h1 {
+      font-size: 2rem;
+    }
+  
+    .container p {
+      font-size: 0.9rem;
+    }
+  
+    .search-input {
+      width: 100%;
+    }
+    /* Always allow scrolling on all devices */
+html, body {
+    
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto;   /* Always allow vertical scroll */
+  }
+  
+  /* Optional: Custom Scrollbar Style (for beauty) */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  }
+  /* Allow page to scroll
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Prevent side scroll */
+    /* overflow-y: auto;   Enable vertical scroll */
+  
+  /* For mobile menu open */
+  /* @media (max-width: 768px) {
+    body {
+      overflow-y: scroll;
+    }
+     }
+
+  } */ 
+   /* Footer */
+   footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-nav ul li a:hover {
+    color: #ddd;
+  }
+  
+  .footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+  }
+  
+  .footer-social a:hover {
+    color: #007bff;
+  }
+  
+  .footer-contact p {
+    margin-bottom: 5px;
+  }
+  
+  .footer-bottom {
+    background-color: #111;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+}
+
+  
+  
+
+  
+  
+  
